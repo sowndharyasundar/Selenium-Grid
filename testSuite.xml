@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Sample Project Suite">
+	 <listeners>
+		<listener class-name="com.qa.baseclass.ListenerTest"></listener>
+	</listeners> 
+	<test name="Sample Project Test">
+	<parameter name="local" value="false"/>
+	<parameter name="docker" value="false"/>
+	<parameter name="cloud" value="true"/>
+	<parameter name="browser" value="chrome"/>
+	<parameter name="wait" value="20"/>
+	<parameter name="url" value="https://www.docker.com"></parameter>
+		<classes>
+			<class name="com.qa.tests.SampleTest" />
+		</classes>
+	</test>
+</suite>
